@@ -1,0 +1,553 @@
+:root {
+      --blue-dark: #003366;    /* Azul escuro para contraste */
+      --blue-medium: #0066cc;  /* Azul principal */
+      --blue-light: #4da6ff;   /* Azul claro */
+      --white: #ffffff;
+      --gray-light: #f5f5f5;
+      --gray-medium: #e0e0e0;
+      --gray-dark: #333333;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--gray-dark);
+      overflow-x: hidden;
+      background-color: var(--white);
+      line-height: 1.6;
+    }
+    
+    /* WhatsApp Fixo */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      text-decoration: none;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25d366;
+      color: var(--white);
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.4s;
+      animation: pulse 2s infinite;
+    }
+    
+    .whatsapp-float:hover {
+      background-color: #128C7E;
+      transform: scale(1.05);
+      text-decoration: none;
+      color: var(--white);
+    }
+    
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+    
+    /* Navbar */
+    .navbar {
+      background-color: var(--blue-dark);
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .navbar-brand img {
+      height: 40px;
+      width: auto;
+    }
+    
+    .nav-link {
+      color: var(--white);
+      font-weight: 500;
+      margin: 0 10px;
+      position: relative;
+    }
+    
+    .nav-link:hover {
+      color: var(--blue-light);
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: var(--blue-light);
+      bottom: -5px;
+      left: 0;
+      transition: width 0.3s;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+      height: 100vh;
+      min-height: 600px;
+      background: linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 51, 102, 0.9)),
+                  url('img/fortsat-hero-bg.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      padding-top: 70px;
+      color: var(--white);
+      text-align: center;
+    }
+    
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    
+    .btn-blue {
+      background-color: var(--blue-medium);
+      color: var(--white);
+      font-weight: bold;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 30px;
+      transition: all 0.3s;
+    }
+    
+    .btn-blue:hover {
+      background-color: var(--blue-light);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(77, 166, 255, 0.3);
+      color: var(--white);
+    }
+    
+    .btn-outline-blue {
+      border: 2px solid var(--blue-light);
+      color: var(--blue-light);
+      background-color: transparent;
+      font-weight: bold;
+      padding: 10px 28px;
+      border-radius: 30px;
+      transition: all 0.3s;
+    }
+    
+    .btn-outline-blue:hover {
+      background-color: var(--blue-light);
+      color: var(--white);
+    }
+    
+    /* Empresas Section */
+    .empresas-section {
+      padding: 5rem 0;
+      background-color: var(--gray-light);
+    }
+    
+    .empresas-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .empresas-title h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--blue-dark);
+      position: relative;
+      display: inline-block;
+    }
+    
+    .empresas-title h2::after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background-color: var(--blue-medium);
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    /* Cards que giram */
+    .flip-card-container {
+      perspective: 1000px;
+      height: 350px;
+      margin-bottom: 30px;
+    }
+    
+    .flip-card {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+    
+    .flip-card-container:hover .flip-card {
+      transform: rotateY(180deg);
+    }
+    
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+    
+    .flip-card-front {
+      background-color: var(--white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      border-top: 5px solid var(--blue-medium);
+    }
+    
+    .flip-card-back {
+      background-color: var(--blue-dark);
+      color: var(--white);
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 30px;
+    }
+    
+    .card-logo {
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+    
+    .card-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    
+    .card-description {
+      text-align: center;
+      line-height: 1.6;
+    }
+    
+    .card-back-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    
+    .card-back-text {
+      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    
+    .card-link {
+      display: inline-block;
+      background-color: var(--blue-light);
+      color: var(--white);
+      padding: 8px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+      text-align: center;
+      margin: 0 auto;
+    }
+    
+    .card-link:hover {
+      background-color: var(--white);
+      color: var(--blue-dark);
+      transform: translateY(-2px);
+    }
+    
+    /* Mais que um Grupo Section */
+    .mais-que-grupo-section {
+      padding: 5rem 0;
+      background-color: var(--white);
+    }
+    
+    .mais-que-grupo-content {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .mais-que-grupo-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--blue-dark);
+      margin-bottom: 2rem;
+    }
+    
+    .mais-que-grupo-text {
+      font-size: 1.2rem;
+      color: var(--gray-dark);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    
+    /* História Section */
+    .historia-section {
+      padding: 5rem 0;
+      background-color: var(--gray-light);
+    }
+    
+    .historia-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .historia-title h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--blue-dark);
+      position: relative;
+      display: inline-block;
+    }
+    
+    .historia-title h2::after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background-color: var(--blue-medium);
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .historia-timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .historia-timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 4px;
+      background-color: var(--blue-medium);
+      transform: translateX(-50%);
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 50px;
+      width: 50%;
+      padding: 0 40px;
+    }
+    
+    .timeline-item:nth-child(odd) {
+      left: 0;
+    }
+    
+    .timeline-item:nth-child(even) {
+      left: 50%;
+    }
+    
+    .timeline-content {
+      background-color: var(--white);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+    
+    .timeline-content::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      width: 20px;
+      height: 20px;
+      background-color: var(--white);
+      transform: rotate(45deg);
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-content::after {
+      right: -10px;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-content::after {
+      left: -10px;
+    }
+    
+    .timeline-year {
+      font-weight: bold;
+      color: var(--blue-medium);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+    
+    .timeline-text {
+      color: var(--gray-dark);
+    }
+    
+    .historia-cta {
+      text-align: center;
+      margin-top: 3rem;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: var(--blue-dark);
+      color: var(--white);
+      padding: 4rem 0 2rem;
+    }
+    
+    .footer-logo {
+      height: 50px;
+      margin-bottom: 1.5rem;
+      width: auto;
+    }
+    
+    .footer-links h5 {
+      color: var(--blue-light);
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+    }
+    
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .footer-links li {
+      margin-bottom: 0.8rem;
+    }
+    
+    .footer-links a {
+      color: var(--gray-medium);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: var(--blue-light);
+      padding-left: 5px;
+    }
+    
+    .social-icons a {
+      color: var(--white);
+      font-size: 1.5rem;
+      margin-right: 15px;
+      transition: all 0.3s;
+    }
+    
+    .social-icons a:hover {
+      color: var(--blue-light);
+      transform: translateY(-3px);
+    }
+
+    #flip-card-front-fortsat{
+        background: linear-gradient(rgba(2, 127, 176, 0.828), rgba(3, 65, 123, 0.771)),
+                  url('as-5-melhores-dicas-para-uma-gestao-de-estoque-eficiente.jpg') no-repeat center center/cover;
+    }
+    
+    /* Responsividade */
+    @media (max-width: 992px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+      
+      .historia-timeline::before {
+        left: 30px;
+      }
+      
+      .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 0;
+      }
+      
+      .timeline-item:nth-child(even) {
+        left: 0;
+      }
+      
+      .timeline-item:nth-child(odd) .timeline-content::after,
+      .timeline-item:nth-child(even) .timeline-content::after {
+        left: -10px;
+      }
+      
+      .flip-card-container {
+        height: 300px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .empresas-title h2,
+      .mais-que-grupo-title,
+      .historia-title h2 {
+        font-size: 2rem;
+      }
+      
+      .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 25px;
+      }
+      
+      .flip-card-container {
+        height: 280px;
+      }
+      
+      .card-logo {
+        max-width: 150px;
+      }
+      
+      .card-title {
+        font-size: 1.5rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .flip-card-container {
+        height: 320px;
+      }
+    }
