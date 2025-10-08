@@ -14,15 +14,34 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  <link rel="shortcut icon" href="img/fortsat-favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="assets/style.css">
-  <link rel="shortcut icon" href="img/images.jpeg" type="image/x-icon">
+  <link rel="shortcut icon" href="img/fortsat-logo.png" type="image/x-icon">
 
     <style>
         #flip-card-front-fortsat{
             background: linear-gradient(rgba(2, 127, 176, 0.828), rgba(3, 65, 123, 0.771)),
                     url('img/as-5-melhores-dicas-para-uma-gestao-de-estoque-eficiente.jpg') no-repeat center center/cover;
         }
+
+        #flip-card-front-fortsun{
+          background: linear-gradient(rgba(2, 11, 33, 0.975), rgba(6, 24, 67, 0.838)),
+                  url('img/as-5-melhores-dicas-para-uma-gestao-de-estoque-eficiente.jpg') no-repeat center center/cover;
+        }
+
+        #flip-card-front-fortlog{
+          background: linear-gradient(rgba(33, 26, 2, 0.975), rgba(67, 61, 6, 0.838)),
+                  url('img/as-5-melhores-dicas-para-uma-gestao-de-estoque-eficiente.jpg') no-repeat center center/cover;
+        }
+
+        #home{
+            background: linear-gradient(rgba(5, 77, 105, 0.952), rgba(2, 36, 68, 0.925)),
+                    url('img/satelite-imagens.jpg') no-repeat center center/cover;
+        }
+
+        .flip-card-front img{
+          width: 100px;
+        }
+        
     </style>
 
 </head>
@@ -69,7 +88,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-10" data-aos="fade-up">
-          <h1 class="hero-title">GRUPO FORTSAT</h1>
+          <h1 class="hero-title">GRUPO FORT<span style="color: var(--blue-light);">SAT</span></h1>
           <p class="hero-subtitle">Conectando negócios, movendo resultados, transformando histórias</p>
           <div class="d-flex flex-wrap justify-content-center">
             <a href="#empresas" class="btn btn-blue me-2 mb-2">Conheça nossas empresas</a>
@@ -87,20 +106,20 @@
         <h2>NOSSAS EMPRESAS</h2>
       </div>
       
-      <div class="row">
+      <div class="row" style="color: aliceblue;">
         <!-- FORTSAT -->
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
           <div class="flip-card-container">
             <div class="flip-card">
               <div class="flip-card-front" id="flip-card-front-fortsat">
-                <img src="img/images.jpeg" alt="FORT SAT Logo" class="card-logo">
-                <h3 class="card-title">FORT<span style="color: var(--blue-medium);">SAT</span></h3>
+                <img src="img/fortsat-logo.png" alt="FORT SAT Logo" class="card-logo">
+                <h3 class="card-title">FORT<span style="color: #3b8fe2;">SAT</span></h3>
                 <p class="card-description">Clique para saber mais</p>
               </div>
-              <div class="flip-card-back">
-                <h4 class="card-back-title">FORT<span style="color: var(--blue-light);">SAT</span></h4>
+              <div class="flip-card-back" style="background-color: var(--blue-light);">
+                <h4 class="card-back-title">FORT<span style="color: #2468ac">SAT</span></h4>
                 <p class="card-back-text">O Grupo FORTSAT é a força que une e potencializa nossas empresas, criando sinergia e impulsionando resultados através de uma gestão integrada e visão estratégica.</p>
-                <a href="#" class="card-link">Em Breve</a>
+                <a href="#" class="card-link" style="background-color: #2468ac;">Em Breve</a>
               </div>
             </div>
           </div>
@@ -110,15 +129,15 @@
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
           <div class="flip-card-container">
             <div class="flip-card">
-              <div class="flip-card-front">
-                <img src="img/fortsun-logo.png" alt="FORT SUN Logo" class="card-logo">
+              <div class="flip-card-front" id="flip-card-front-fortsun">
+                <img src="img/SLOGAN FORTSUN PNG (1).png" alt="FORT SUN Logo" class="card-logo">
                 <h3 class="card-title">FORT<span style="color: var(--blue-medium);">SUN</span></h3>
                 <p class="card-description">Clique para saber mais</p>
               </div>
-              <div class="flip-card-back">
-                <h4 class="card-back-title">FORT<span style="color: var(--blue-light);">SUN</span></h4>
+              <div class="flip-card-back" style="background-color: rgb(6, 24, 67)">
+                <h4 class="card-back-title">FORT<span style="color: var(--blue-medium);">SUN</span></h4>
                 <p class="card-back-text">Líder em soluções de energia solar, oferecendo sustentabilidade e economia para residências e empresas. Projetamos, instalamos e mantemos sistemas fotovoltaicos de alta performance.</p>
-                <a href="https://fortsunbrasil.com.br" class="card-link" target="_blank">Visitar Site</a>
+                <a href="https://fortsunbrasil.com.br" class="card-link" target="_blank" style="background-color: var(--blue-medium);">Visitar Site</a>
               </div>
             </div>
           </div>
@@ -128,15 +147,15 @@
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
           <div class="flip-card-container">
             <div class="flip-card">
-              <div class="flip-card-front">
-                <img src="img/fortlog-logo.png" alt="FORT LOG Logo" class="card-logo">
-                <h3 class="card-title">FORT<span style="color: var(--blue-medium);">LOG</span></h3>
+              <div class="flip-card-front" id="flip-card-front-fortlog">
+                <img src="img/cropped-cropped-logo_fortlog_horizontal-192x192.png" alt="FORT LOG Logo" class="card-logo">
+                <h3 class="card-title">FORT<span style="color: var(--yellow-log);">LOG</span></h3>
                 <p class="card-description">Clique para saber mais</p>
               </div>
-              <div class="flip-card-back">
-                <h4 class="card-back-title">FORT<span style="color: var(--blue-light);">LOG</span></h4>
+              <div class="flip-card-back" style="background-color: rgb(67, 61, 6);">
+                <h4 class="card-back-title">FORT<span style="color: var(--yellow-log);">LOG</span></h4>
                 <p class="card-back-text">Soluções logísticas completas com agilidade e excelência para todo o Ceará. Oferecemos entregas dedicadas, logística reversa, armazenagem inteligente e muito mais.</p>
-                <a href="https://fortlogbrasil.com.br" class="card-link" target="_blank">Visitar Site</a>
+                <a href="https://fortlogbrasil.com.br" class="card-link" target="_blank" style="background-color: var(--yellow-log);">Visitar Site</a>
               </div>
             </div>
           </div>
