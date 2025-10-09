@@ -7,6 +7,7 @@
       --gray-medium: #e0e0e0;
       --gray-dark: #333333;
       --yellow-log: #ccad00;
+      --font-dark: #050a29;
     }
     
     * {
@@ -66,7 +67,7 @@
     
     /* Navbar */
     .navbar {
-      background-color: var(--blue-dark);
+      background-color: var(--gray-light);
       padding: 15px 0;
       position: fixed;
       width: 100%;
@@ -80,7 +81,7 @@
     }
     
     .nav-link {
-      color: var(--white);
+      color: var(--blue-dark);
       font-weight: 500;
       margin: 0 10px;
       position: relative;
@@ -109,8 +110,6 @@
     .hero-section {
       height: 100vh;
       min-height: 600px;
-      background: linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 51, 102, 0.9)),
-                  url('img/fortsat-hero-bg.jpg') no-repeat center center/cover;
       display: flex;
       align-items: center;
       padding-top: 70px;
