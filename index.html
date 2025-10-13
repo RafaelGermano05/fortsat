@@ -14,36 +14,58 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  <link rel="stylesheet" href="assets/style.css">
   <link rel="shortcut icon" href="img/fortsat-logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/style.css">
 
-    <style>
-        #flip-card-front-fortsat{
-            background: linear-gradient(rgba(2, 127, 176, 0.828), rgba(3, 65, 123, 0.771)),
-                    url('img/as-5-melhores-dicas-para-uma-gestao-de-estoque-eficiente.jpg') no-repeat center center/cover;
-        }
+  <style>
+    .mais-que-grupo-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" fill="%230066cc"><polygon points="0,0 1000,0 1000,1000 0,1000" fill-opacity="0.05"/></svg>');
+      background-size: cover;
+    }
 
-        #flip-card-front-fortsun{
-          background: linear-gradient(rgba(2, 11, 33, 0.975), rgba(6, 24, 67, 0.838)),
-                  url('img/as-5-melhores-dicas-para-uma-gestao-de-estoque-eficiente.jpg') no-repeat center center/cover;
-        }
+    #flip-card-front-fortsat{
+      background: linear-gradient(rgba(2, 127, 176, 0.938), rgba(3, 65, 123, 0.932)),
+                url('img/bg-cta.jpg') no-repeat center center/cover;
+    }
 
-        #flip-card-front-fortlog{
-          background: linear-gradient(rgba(33, 26, 2, 0.975), rgba(67, 61, 6, 0.838)),
-                  url('img/as-5-melhores-dicas-para-uma-gestao-de-estoque-eficiente.jpg') no-repeat center center/cover;
-        }
+    #flip-card-front-fortsun{
+      background: linear-gradient(rgba(2, 11, 33, 0.975), rgba(6, 24, 67, 0.932)),
+                url('img/sun\ academy\ \(3\).png') no-repeat center center/cover;
+    }
 
-        #home{
-            background: linear-gradient(rgba(5, 77, 105, 0.952), rgba(2, 36, 68, 0.925)),
-                    url('img/satelite-imagens.jpg') no-repeat center center/cover;
-        }
+    #flip-card-front-fortlog{
+      background: linear-gradient(rgba(33, 26, 2, 0.975), rgba(67, 61, 6, 0.918)),
+                url('img/as-5-melhores-dicas-para-uma-gestao-de-estoque-eficiente.jpg') no-repeat center center/cover;
+    }
 
-        .flip-card-front img{
-          width: 100px;
-        }
-        
-    </style>
+    .hero-section {
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      padding-top: 70px;
+      color: var(--white);
+      text-align: center;
+      background: linear-gradient(rgba(5, 77, 105, 0.952), rgba(2, 36, 68, 0.925)),
+                  url('img/satelite-imagens.jpg') no-repeat center center/cover;
+    }
 
+    .airplane {
+      position: absolute;
+      width: 80px;
+      height: 60px;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%230066cc" d="M480 192H365.71L260.61 8.06A16.014 16.014 0 0 0 246.71 0h-65.5c-10.63 0-18.3 10.17-15.38 20.39L214.86 192H112l-43.2-57.6c-3.02-4.03-7.77-6.4-12.8-6.4H16.01C5.6 128-2.04 137.78.49 147.88L32 256 .49 364.12C-2.04 374.22 5.6 384 16.01 384H56c5.04 0 9.78-2.37 12.8-6.4L112 320h102.86l-49.03 171.6c-2.92 10.22 4.75 20.4 15.38 20.4h65.5c5.74 0 11.04-3.08 13.89-8.06L365.71 320H480c17.67 0 32-14.33 32-32v-64c0-17.67-14.33-32-32-32z"/></svg>') no-repeat center center;
+      background-size: contain;
+      animation: fly 15s linear infinite;
+      z-index: 2;
+    }
+  </style>
 </head>
 
 <body>
@@ -68,6 +90,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#empresas">Empresas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#mais-que-grupo">Sobre</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#historia">História</a>
@@ -110,14 +135,13 @@
             <div class="flip-card">
               <div class="flip-card-front" id="flip-card-front-fortsat">
                 <img src="img/fortsat-logo.png" alt="FORT SAT Logo" class="card-logo">
-                <h3 class="card-title">FORT<span style="color: #3b8fe2;">SAT</span></h3>
-                <p class="card-description">Clique para saber mais</p>
+                <div><h3 class="card-title">FORT<span style="color: #3b8fe2;">SAT</span></h3>
+                  <p class="card-description">Clique para saber mais</p> </div>
               </div>
               <div class="flip-card-back" style="background-color: var(--blue-light);">
                 <h4 class="card-back-title">FORT<span style="color: #2468ac">SAT</span></h4>
                 <p class="card-back-text">O Grupo FORTSAT é a força que une e potencializa nossas empresas, criando sinergia e impulsionando resultados através de uma gestão integrada e visão estratégica.</p>
                 <a href="loja.html" class="card-link" target="_blank" style="background-color: #2468ac;">Visitar Site</a>
-
               </div>
             </div>
           </div>
@@ -129,12 +153,12 @@
             <div class="flip-card">
               <div class="flip-card-front" id="flip-card-front-fortsun">
                 <img src="img/SLOGAN FORTSUN PNG (1).png" alt="FORT SUN Logo" class="card-logo">
-                <h3 class="card-title">FORT<span style="color: var(--blue-medium);">SUN</span></h3>
-                <p class="card-description">Clique para saber mais</p>
+                <div> <h3 class="card-title">FORT<span style="color: var(--blue-medium);">SUN</span></h3>
+                  <p class="card-description">Clique para saber mais</p></div> 
               </div>
               <div class="flip-card-back" style="background-color: rgb(6, 24, 67)">
                 <h4 class="card-back-title">FORT<span style="color: var(--blue-medium);">SUN</span></h4>
-                <p class="card-back-text">Líder em soluções de energia solar, oferecendo sustentabilidade e economia para residências e empresas. Projetamos, instalamos e mantemos sistemas fotovoltaicos de alta performance.</p>
+                <p class="card-back-text">Prestadora de serviços com uma parceria sólida e reconhecida nacionalmente com o Mercado Pago. Atuamos de forma simples e e descomplicada em meios de pagamento, oferecendo soluções que impulsionam vendas e fortalecem empreendedores.</p>
                 <a href="https://fortsunbrasil.com.br" class="card-link" target="_blank" style="background-color: var(--blue-medium);">Visitar Site</a>
               </div>
             </div>
@@ -147,8 +171,8 @@
             <div class="flip-card">
               <div class="flip-card-front" id="flip-card-front-fortlog">
                 <img src="img/cropped-cropped-logo_fortlog_horizontal-192x192.png" alt="FORT LOG Logo" class="card-logo">
-                <h3 class="card-title">FORT<span style="color: var(--yellow-log);">LOG</span></h3>
-                <p class="card-description">Clique para saber mais</p>
+                <div> <h3 class="card-title">FORT<span style="color: var(--yellow-log);">LOG</span></h3>
+                  <p class="card-description">Clique para saber mais</p></div> 
               </div>
               <div class="flip-card-back" style="background-color: rgb(67, 61, 6);">
                 <h4 class="card-back-title">FORT<span style="color: var(--yellow-log);">LOG</span></h4>
@@ -162,68 +186,67 @@
     </div>
   </section>
 
-  <!-- Mais que um Grupo Section -->
+  <!-- Mais que um Grupo Section - NOVA VERSÃO -->
   <section class="mais-que-grupo-section" id="mais-que-grupo">
     <div class="container">
       <div class="mais-que-grupo-content" data-aos="fade-up">
         <h2 class="mais-que-grupo-title">MAIS QUE UM GRUPO DE EMPRESAS</h2>
         <p class="mais-que-grupo-text">O Grupo FORTSAT nasceu da visão de criar um ecossistema de negócios que se complementam e se fortalecem mutuamente. Mais do que empresas individuais, somos uma rede integrada de soluções que atende às diversas necessidades do mercado.</p>
-        <p class="mais-que-grupo-text">Nossa missão é conectar negócios, mover resultados e transformar histórias através da excelência operacional, inovação constante e compromisso com o desenvolvimento sustentável.</p>
+        
+        <div class="mais-que-grupo-features">
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-icon">
+              <i class="fas fa-synergy"></i>
+            </div>
+            <h3 class="feature-title">Sinergia</h3>
+          </div>
+          
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3 class="feature-title">Inovação</h3>
+          </div>
+          
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3 class="feature-title">Parceria</h3>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- História Section -->
+  <!-- História Section - NOVA VERSÃO -->
   <section class="historia-section" id="historia">
     <div class="container">
       <div class="historia-title" data-aos="fade-up">
-        <h2>NOSSA HISTÓRIA</h2>
+        <h2>CONHEÇA NOSSA HISTÓRIA</h2>
       </div>
       
-      <div class="historia-timeline">
-        <!-- Item 1 -->
-        <div class="timeline-item" data-aos="fade-right">
-          <div class="timeline-content">
-            <div class="timeline-year">2018</div>
-            <div class="timeline-text">Fundação da FORTLOG, com foco em soluções logísticas para o mercado cearense.</div>
-          </div>
-        </div>
-        
-        <!-- Item 2 -->
-        <div class="timeline-item" data-aos="fade-left">
-          <div class="timeline-content">
-            <div class="timeline-year">2020</div>
-            <div class="timeline-text">Expansão da FORTLOG com novos serviços e ampliação da frota, consolidando a marca no mercado regional.</div>
-          </div>
-        </div>
-        
-        <!-- Item 3 -->
-        <div class="timeline-item" data-aos="fade-right">
-          <div class="timeline-content">
-            <div class="timeline-year">2022</div>
-            <div class="timeline-text">Criação da FORTSUN, diversificando os negócios do grupo com soluções em energia solar.</div>
-          </div>
-        </div>
-        
-        <!-- Item 4 -->
-        <div class="timeline-item" data-aos="fade-left">
-          <div class="timeline-content">
-            <div class="timeline-year">2023</div>
-            <div class="timeline-text">Formalização do Grupo FORTSAT, unindo as empresas sob uma única identidade corporativa.</div>
-          </div>
-        </div>
-        
-        <!-- Item 5 -->
-        <div class="timeline-item" data-aos="fade-right">
-          <div class="timeline-content">
-            <div class="timeline-year">2024</div>
-            <div class="timeline-text">Expansão da atuação da FORTSUN para novos mercados e consolidação da FORTLOG como referência em logística no Ceará.</div>
-          </div>
-        </div>
+      <div class="historia-subtitle" data-aos="fade-up" data-aos-delay="100">
+        De Santa Catarina para o Ceará, em constante crescimento
       </div>
       
-      <div class="historia-cta" data-aos="fade-up">
-        <a href="historia-completa.html" class="btn btn-blue">Saiba Mais</a>
+      <div class="historia-content">
+        <div class="airplane-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="map-path"></div>
+          <div class="map-point start"></div>
+          <div class="map-point end"></div>
+          <div class="map-label start">SC</div>
+          <div class="map-label end">CE</div>
+          <div class="airplane"></div>
+        </div>
+        
+        <div class="historia-text" data-aos="fade-up" data-aos-delay="300">
+          Nossa jornada começou em Santa Catarina, onde adquirimos experiência e conhecimento que nos trouxeram até o Ceará. Ao longo dos anos, expandimos nossas operações e diversificamos nossos negócios, sempre com foco na qualidade e na satisfação dos nossos clientes.
+        </div>
+        
+        <div class="historia-cta" data-aos="fade-up" data-aos-delay="400">
+          <a href="historia-completa.html" class="btn btn-historia">Conheça Nossa História Completa</a>
+        </div>
       </div>
     </div>
   </section>
@@ -236,9 +259,8 @@
           <img src="img/fortsat-logo-branco.png" alt="FORTLOG Logo" class="footer-logo" loading="lazy">
           <p class="mt-3">Conectando negócios, movendo resultados, transformando histórias.</p>
           <div class="social-icons mt-3">
-            <a href="https://instagram.com/grupofortsat" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/fortsat/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/fortsat-com%C3%A9rcio-e-transporte-1408a6154/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             <a href="https://wa.me/5585999064348" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
@@ -288,6 +310,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   
   <!-- JavaScript principal -->
-  <script src="assets/script.js"></script>
+  <script src="assets/script.js">   
+  </script>
 </body>
 </html>

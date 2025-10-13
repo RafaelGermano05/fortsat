@@ -107,15 +107,6 @@
     }
     
     /* Hero Section */
-    .hero-section {
-      height: 100vh;
-      min-height: 600px;
-      display: flex;
-      align-items: center;
-      padding-top: 70px;
-      color: var(--white);
-      text-align: center;
-    }
     
     .hero-title {
       font-size: 3.5rem;
@@ -225,10 +216,13 @@
       background-color: var(--white);
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      justify-content: space-between;
+      align-items: flex-start;
       padding: 20px;
-      /* border-top: 5px solid var(--blue-medium); */
+    }
+
+    .flip-card-front img{
+      width: 130px;
     }
     
     .flip-card-back {
@@ -290,45 +284,112 @@
       transform: translateY(-2px);
     }
     
-    /* Mais que um Grupo Section */
+    /* Mais que um Grupo Section - NOVA VERSÃO */
     .mais-que-grupo-section {
-      padding: 5rem 0;
-      background-color: var(--white);
+      padding: 6rem 0;
+      background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-medium) 100%);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
     }
+    
     
     .mais-que-grupo-content {
       text-align: center;
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
+      position: relative;
+      z-index: 1;
     }
     
     .mais-que-grupo-title {
-      font-size: 2.5rem;
+      font-size: 3rem;
       font-weight: 700;
-      color: var(--blue-dark);
       margin-bottom: 2rem;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .mais-que-grupo-title::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 4px;
+      background-color: var(--blue-light);
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
     }
     
     .mais-que-grupo-text {
-      font-size: 1.2rem;
-      color: var(--gray-dark);
-      line-height: 1.6;
+      font-size: 1.3rem;
+      line-height: 1.8;
       margin-bottom: 2rem;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
     }
     
-    /* História Section */
+    .mais-que-grupo-features {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .feature-item {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 2rem;
+      width: 250px;
+      transition: all 0.4s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .feature-item:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--blue-light);
+    }
+    
+    .feature-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    
+    .feature-text {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    
+    /* História Section - NOVA VERSÃO */
     .historia-section {
-      padding: 5rem 0;
+      padding: 6rem 0;
       background-color: var(--gray-light);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .historia-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
     }
     
     .historia-title {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
     }
     
     .historia-title h2 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       font-weight: 700;
       color: var(--blue-dark);
       position: relative;
@@ -338,86 +399,133 @@
     .historia-title h2::after {
       content: "";
       position: absolute;
-      width: 50px;
-      height: 3px;
+      width: 80px;
+      height: 4px;
       background-color: var(--blue-medium);
-      bottom: -10px;
+      bottom: -15px;
       left: 50%;
       transform: translateX(-50%);
     }
     
-    .historia-timeline {
-      position: relative;
-      max-width: 800px;
-      margin: 0 auto;
+    .historia-subtitle {
+      text-align: center;
+      font-size: 1.5rem;
+      color: var(--blue-medium);
+      margin-bottom: 3rem;
+      font-weight: 500;
     }
     
-    .historia-timeline::before {
-      content: '';
+    .historia-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      padding: 3rem 0;
+    }
+    
+    .airplane-container {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      margin-bottom: 3rem;
+    }
+        
+    @keyframes fly {
+      0% {
+        left: -100px;
+        transform: translateY(0) rotate(0deg);
+      }
+      25% {
+        transform: translateY(-20px) rotate(5deg);
+      }
+      50% {
+        transform: translateY(0) rotate(0deg);
+      }
+      75% {
+        transform: translateY(20px) rotate(-5deg);
+      }
+      100% {
+        left: 100%;
+        transform: translateY(0) rotate(0deg);
+      }
+    }
+    
+    .map-path {
       position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      width: 4px;
-      background-color: var(--blue-medium);
-      transform: translateX(-50%);
-    }
-    
-    .timeline-item {
-      position: relative;
-      margin-bottom: 50px;
-      width: 50%;
-      padding: 0 40px;
-    }
-    
-    .timeline-item:nth-child(odd) {
+      top: 50%;
       left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--blue-medium) 0%, var(--blue-light) 100%);
+      transform: translateY(-50%);
+      z-index: 1;
     }
     
-    .timeline-item:nth-child(even) {
-      left: 50%;
-    }
-    
-    .timeline-content {
-      background-color: var(--white);
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      position: relative;
-    }
-    
-    .timeline-content::after {
-      content: '';
+    .map-point {
       position: absolute;
-      top: 20px;
+      top: 50%;
+      transform: translateY(-50%);
       width: 20px;
       height: 20px;
-      background-color: var(--white);
-      transform: rotate(45deg);
+      background-color: var(--blue-medium);
+      border-radius: 50%;
+      z-index: 2;
     }
     
-    .timeline-item:nth-child(odd) .timeline-content::after {
-      right: -10px;
+    .map-point.start {
+      left: 10%;
     }
     
-    .timeline-item:nth-child(even) .timeline-content::after {
-      left: -10px;
+    .map-point.end {
+      left: 90%;
     }
     
-    .timeline-year {
+    .map-label {
+      position: absolute;
+      top: 60%;
+      transform: translateY(-50%);
       font-weight: bold;
-      color: var(--blue-medium);
-      margin-bottom: 10px;
-      font-size: 1.2rem;
+      color: var(--blue-dark);
     }
     
-    .timeline-text {
+    .map-label.start {
+      left: 8%;
+    }
+    
+    .map-label.end {
+      left: 88%;
+    }
+    
+    .historia-text {
+      max-width: 800px;
+      text-align: center;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 3rem;
       color: var(--gray-dark);
     }
     
     .historia-cta {
       text-align: center;
-      margin-top: 3rem;
+      margin-top: 2rem;
+    }
+    
+    .btn-historia {
+      background-color: var(--blue-medium);
+      color: var(--white);
+      font-weight: bold;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 30px;
+      transition: all 0.3s;
+      font-size: 1.1rem;
+    }
+    
+    .btn-historia:hover {
+      background-color: var(--blue-light);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(77, 166, 255, 0.3);
+      color: var(--white);
     }
     
     /* Footer */
@@ -470,11 +578,6 @@
       color: var(--blue-light);
       transform: translateY(-3px);
     }
-
-    #flip-card-front-fortsat{
-        background: linear-gradient(rgba(2, 127, 176, 0.828), rgba(3, 65, 123, 0.771)),
-                  url('as-5-melhores-dicas-para-uma-gestao-de-estoque-eficiente.jpg') no-repeat center center/cover;
-    }
     
     /* Responsividade */
     @media (max-width: 992px) {
@@ -486,23 +589,24 @@
         font-size: 1.2rem;
       }
       
-      .historia-timeline::before {
-        left: 30px;
+      .mais-que-grupo-title {
+        font-size: 2.5rem;
       }
       
-      .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 0;
+      .mais-que-grupo-text {
+        font-size: 1.1rem;
       }
       
-      .timeline-item:nth-child(even) {
-        left: 0;
+      .feature-item {
+        width: 220px;
       }
       
-      .timeline-item:nth-child(odd) .timeline-content::after,
-      .timeline-item:nth-child(even) .timeline-content::after {
-        left: -10px;
+      .historia-title h2 {
+        font-size: 2.2rem;
+      }
+      
+      .historia-subtitle {
+        font-size: 1.3rem;
       }
       
       .flip-card-container {
@@ -525,6 +629,16 @@
         font-size: 2rem;
       }
       
+      .mais-que-grupo-features {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .feature-item {
+        width: 100%;
+        max-width: 300px;
+      }
+      
       .whatsapp-float {
         width: 50px;
         height: 50px;
@@ -544,10 +658,35 @@
       .card-title {
         font-size: 1.5rem;
       }
+      
+      .airplane-container {
+        height: 150px;
+      }
+      
+      .airplane {
+        width: 60px;
+        height: 45px;
+      }
     }
     
     @media (max-width: 576px) {
       .flip-card-container {
         height: 320px;
+      }
+      
+      .mais-que-grupo-title {
+        font-size: 1.8rem;
+      }
+      
+      .historia-title h2 {
+        font-size: 1.8rem;
+      }
+      
+      .historia-subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .historia-text {
+        font-size: 1rem;
       }
     }

@@ -29,4 +29,15 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         });
       });
+
+      // Adiciona ícones personalizados
+      const style = document.createElement('style');
+      style.textContent = `
+        .fa-synergy:before {
+          content: "\\f0e8";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+        }
+      `;
+      document.head.appendChild(style);
     });
