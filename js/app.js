@@ -86,8 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
           <img src="${product.image}" alt="${product.name}" onerror="this.src='img/placeholder.jpg'">
         </div>
         <div class="product-info">
-          <div class="product-price">R$ ${product.price.toFixed(2)}</div>
-          <div class="product-installments">${product.installments}</div>
           <div class="product-name">${product.name}</div>
           <div class="product-shipping">${product.shipping}</div>
           <button class="product-btn" data-bs-toggle="modal" data-bs-target="#productModal">Ver Detalhes</button>
@@ -111,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Abre o modal com os detalhes do produto
   function openProductModal(product) {
     document.getElementById('modalProductImage').src = product.image;
-    document.getElementById('modalProductPrice').textContent = `R$ ${product.price.toFixed(2)}`;
+    document.getElementById('modalProductPrice').textContent = `${product.price}`;
     document.getElementById('modalProductInstallments').textContent = product.installments;
     document.getElementById('modalProductDescription').textContent = product.description;
     
