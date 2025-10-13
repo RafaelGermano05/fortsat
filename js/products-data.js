@@ -273,7 +273,7 @@ const productsData = [
     id: 15,
     name: "Receptor Satmax 6 Sat Hd Digital Regional Banda Ku Elsys Preto",
     price: "Consulte o preço",
-    category: "networking",
+    category: "accessories",
     image: "img/produtos/receptor-satmax-brinde.webp",
     shipping: "Conheça o produto!",
     description: "SATMAX 6, receptor digital via satélite Full HD compatível com a nova parabólica Banda Ku, preparado para o sinal 5G.",
